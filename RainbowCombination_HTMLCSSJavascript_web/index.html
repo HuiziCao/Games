@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainbow Combination</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <canvas id="gameCanvas" width="800" height="900"></canvas>
+
+        <!-- Start message container -->
+        <div id="startMessage" class="message-container">
+            <p>Welcome to rainbow combination</p>
+            <p><strong>Merge Rules and Scoring:</strong></p>
+            <p>This is a merging game with balls of seven rainbow colors. Three or four balls of the same color can be merged into a ball of the next level. The highest level ball will disappear when merged, and the player scores 20 points.</p>
+            <p><strong>Player's Control:</strong></p>
+            <p>The player can click on a stick. The first click will lift the top ball on the clicked stick. Clicking on any stick again (the second click) will place the lifted ball onto that stick. Each time the lifted ball is the top ball on the stick, and if the top two are the same color, both will be lifted.</p>
+            <p><strong>Other Game Mechanics Related to Player Actions:</strong></p>
+            <p>After every four moves by the player (equivalent to 8 stick clicks), the system will randomly drop balls from the top. Each stick gets one ball, and the level of the ball is random but no higher than the current highest level. Before dropping, the upcoming balls are shown for 5 seconds, during which the player can continue to play and see the colors of the impending balls.</p>
+            <p><strong>Game Over Rules:</strong></p>
+            <p>Each stick can have up to seven balls. Attempting to place an eighth ball will cause all balls to collapse, ending the game and displaying the final score.</p>
+            <p>Click to start</p>
+        </div>
+
+        <!-- Control panel -->
+        <div class="control-panel">
+            <button id="startButton">Start</button>
+            <button id="restartButton" style="display: none;">Restart</button>
+            <p id="scoreLabel">Score: 0</p>
+            <p id="clicksLeftLabel">Clicks left: 8</p>
+            <p id="countdownLabel">Time left: 5</p>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
